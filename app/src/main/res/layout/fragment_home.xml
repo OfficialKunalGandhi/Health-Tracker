@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.HomeFragment">
- <TextView
+
+ <com.facebook.shimmer.ShimmerFrameLayout
+     android:id="@+id/ShimmerLayout"
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:gravity="center"
-     android:text="Home Screen"
-     />
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/RecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:listitem="@layout/health_list_item"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+ </com.facebook.shimmer.ShimmerFrameLayout>
+
+ <ImageView
+     android:id="@+id/NoInternetImage"
+     android:layout_width="190dp"
+     android:layout_height="109dp"
+     android:src="@drawable/ic_baseline_public_off_24"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <TextView
+     android:id="@+id/NoInternetText"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textColor="@color/black"
+     android:textStyle="bold"
+     android:textSize="25sp"
+     android:layout_marginBottom="250dp"
+     android:text="No Internet Connection"
+     android:textAlignment="center"
+     app:layout_constraintBottom_toBottomOf="@+id/ShimmerLayout"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/NoInternetImage" />
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/floatingActionButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="end|bottom"
+     android:layout_margin="50dp"
+     android:clickable="true"
+     android:elevation="20dp"
+     android:focusable="true"
+     android:src="@drawable/ic_baseline_directions_run_24"
+     app:backgroundTint="@color/white"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
