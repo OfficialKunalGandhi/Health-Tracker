@@ -1,9 +1,9 @@
-package com.akshatsahijpal.letseat.data
+package com.akshatsahijpal.letseat.data.subroot
 
 import com.google.gson.annotations.SerializedName
 
-data class PropertiesItem(@SerializedName("amount")
-                          val amount: Double = 0.0,
+data class FlavonoidsItem(@SerializedName("amount")
+                          val amount: Int = 0,
                           @SerializedName("unit")
                           val unit: String = "",
                           @SerializedName("name")

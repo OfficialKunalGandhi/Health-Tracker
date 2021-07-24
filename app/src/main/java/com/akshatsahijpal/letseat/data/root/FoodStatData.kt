@@ -1,5 +1,6 @@
-package com.akshatsahijpal.letseat.data
+package com.akshatsahijpal.letseat.data.root
 
+import com.akshatsahijpal.letseat.data.subroot.ResultsItem
 import com.google.gson.annotations.SerializedName
 
 data class FoodStatData(@SerializedName("number")

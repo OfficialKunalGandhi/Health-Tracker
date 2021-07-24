@@ -1,4 +1,4 @@
-package com.akshatsahijpal.letseat.data
+package com.akshatsahijpal.letseat.data.subroot
 
 import com.google.gson.annotations.SerializedName
 
